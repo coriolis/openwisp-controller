@@ -14,6 +14,7 @@ redirect_view = RedirectView.as_view(url=reverse_lazy('admin:index'))
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('openwisp_controller.urls')),
+    url(r'^sniffer/', include('locatio.urls')),
     url(r'^$', redirect_view, name='index')
 ]
 
